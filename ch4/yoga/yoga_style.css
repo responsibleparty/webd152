@@ -1,0 +1,22 @@
+body {
+  background-color: #f47f6b;
+}
+nav {
+  background-color: #fff4e9;
+}
+nav ul {
+  list-style-type: none;
+}
+h1 {
+  background-color: #fff4e9;
+  color: #7a5197;
+}
+h2 {
+  color: #7a5197;
+}
+dt {
+  color: #7a5197;
+}
+main {
+  background-color: #fff4e9;
+}
