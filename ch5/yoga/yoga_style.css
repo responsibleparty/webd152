@@ -1,0 +1,58 @@
+* {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+body {
+  background-color: #9cbfc2;
+  color: #555;
+}
+header {
+  background-color: #9cbfc2;
+  color: #fff;
+  background-image: url(images/lilyheader.jpg);
+  background-position: right; /* bgdp */
+  background-repeat: no-repeat; /* bgr */
+  line-height: 400%; /* lh400% */
+  text-indent: 1em;
+}
+nav {
+  background-color: #dae5ef;
+  font-weight: bold; /* fwb */
+}
+nav a {
+  text-decoration: none; /* txd */
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+nav li {
+  list-style-type: none;
+  margin-left: 50px;
+}
+h1 {
+  margin-bottom: 0;
+}
+h2 {
+  color: #4a65ba;
+}
+h3 {
+  color: #003;
+}
+main {
+  background-color: #dae5ef;
+}
+dt {
+  color: #002171;
+}
+footer {
+  font-size: 75%; /* fz75% */
+  font-style: italic; /* fsi */
+  text-align: center; /* txa */
+}
+.resort {
+  color: #1976d2;
+  font-weight: bold;
+}
+#contact {
+  font-size: 90%;
+}
