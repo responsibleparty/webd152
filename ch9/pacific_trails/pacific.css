@@ -15,10 +15,9 @@ header {
   background-image: url(images/sunset.jpg); /* bgi*/
   background-position: right; /* bgdp */
   background-repeat: no-repeat; /* bgr */
-  color: #fff;
-  /* height: 120px; h60px */
-  /* padding-top: 30px; pt15 */
   background-size: contain; /* bgz */
+  color: #fff;
+  padding: 0.5em;
   text-align: center; /* tac */
 }
 header a {
@@ -49,6 +48,7 @@ nav li {
 nav a {
   text-decoration: none; /* txd */
 }
+/* it is important to keep this order using psudo classes otherwise they might not work correctly */
 nav a:link {
   color: #5c7fa3; /* c#5c7fa3 */
 }
@@ -122,28 +122,30 @@ footer {
   background-size: 100% 100%; /* bgz100%100% */
   height: 300px; /* h300*/
 }
-
 table {
-  border-bottom: 1px solid #1976d2;
-  border-collapse: collapse;
+  border-bottom: 1px solid #1976d2; /* bdb */
+  border-collapse: separate;
 }
-td,
 th {
+  background-color: #1976d2; /* bgc#1976d2 */
+  color: #fff; /* c#fff */
+}
+th,
+td {
   padding: 0.5em;
   /* border: 2px solid #39c; */
-  background-color: #1976d2;
-  color: #fff;
 }
 td {
-  text-align: center;
+  text-align: center; /* tac */
 }
 .text {
-  text-align: left;
+  text-align: left; /* ta:l */
 }
 tr:nth-last-of-type(odd) {
   background-color: #ffcd6f;
 }
-@media (max-width: 420px) {
+
+@media (max-width: 600px) {
   header {
     background-image: none;
   }
@@ -151,6 +153,48 @@ tr:nth-last-of-type(odd) {
   #yurthero,
   #trailhero {
     background-size: auto;
+  }
+  #special table {
+    display: block; /* db*/
+    border: none; /* bd:n */
+  }
+  #special td,
+  #special th {
+    display: block; /* db */
+  }
+  #special thead {
+    display: none; /* dn */
+  }
+  td.package::before {
+    content: "Package:";
+  }
+  td.description::before {
+    content: "Description:";
+  }
+  td.nights::before {
+    content: "Nights:";
+  }
+  td.cost::before {
+    content: "Cost:";
+  }
+  td.package,
+  td.description,
+  td.nights,
+  td.cost {
+    padding-left: 35%; /* pl35% */
+    position: relative; /* pos:r */
+    text-align: left; /* ta:l */
+    font-size: 3.5vw;
+  }
+  td::before {
+    position: absolute; /* pos:a */
+    top: 6px; /* t6 */
+    left: 1.5em; /* l1.5em */
+    font-weight: bold; /* fwb */
+    color: #1976d2; /* c#1976d2 */
+  }
+  td:last-of-type {
+    border-bottom: 2px solid #1b69b2; /* bb2-solid#1b69b2 */
   }
 }
 @media (min-width: 600px) {
