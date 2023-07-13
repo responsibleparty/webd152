@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pacific Trails Resort</title>
+    <title>Pacific Trails Resort :: Reservations</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="pacific.css" />
     <script
@@ -17,7 +17,6 @@
       <header>
         <h1><a href="index.html">Pacific Trails Resort</a></h1>
       </header>
-      <!-- nav>ul*4>a -->
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -26,39 +25,44 @@
           <li><a href="reservations.html">Reservations</a></li>
         </ul>
       </nav>
-      <div id="homehero" class="hero"></div>
-      <!-- main>h2{}+p{} -->
       <main>
-        <h2>Enjoy Nature in luxury</h2>
-        <p>
-          <span class="resort">Pacific Trails Resort</span> offers a special
-          lodging experience on the California North Coast with panoramic views
-          of the Pacific Ocean. Your stay at Pacific Trails Resort includes a
-          sumptuously appointed private yurt and a cooked-to-order breakfast
-          each morning.
-        </p>
+        <h2>Reservations at Pacific Trails</h2>
+        <h3>Contact Us Today!</h3>
+        <p>Required fields are marked with an asterisk*.</p>
 
-        <ul class="fa-ul">
-          <li>
-            <span class="fa-li"
-              ><i class="fa-solid fa-person-swimming"></i></span
-            >Relax in our lodge while enjoying complimentary appetizers and
-            beverages
-          </li>
-          <li>
-            <span class="fa-li"><i class="fa-solid fa-person-hiking"></i></span
-            >Savor nightly fine dining with an ocean view
-          </li>
-          <li>
-            <span class="fa-li"
-              ><i class="fa-solid fa-martini-glass-citrus"></i></span
-            >Unwind in the heated outdoor pool and whirlpool
-          </li>
-          <li>
-            <span class="fa-li"><i class="fa-solid fa-utensils"></i></span
-            >Explore the coast on your own or join our guided tours
-          </li>
-        </ul>
+        <form
+          action="https://webdevbasics.net/scripts/pacific.php"
+          method="POST"
+        >
+          <label for="myFName">*First Name:</label>
+          <input type="text" id="myFName" name="myFName" required />
+
+          <label for="myLName">*Last Name:</label>
+          <input type="text" id="myLName" name="myLName" required />
+
+          <label for="myEmail">*Email:</label>
+          <input type="email" id="myEmail" name="myEmail" required />
+
+          <label for="myPhone">Phone:</label>
+          <input type="tel" id="myPhone" name="myPhone" maxlength="12" />
+
+          <label for="myArrival">Arrival Date:</label>
+          <input type="date" id="myArrival" name="myArrival" />
+
+          <label for="myNights">Nights:</label>
+          <input type="number" id="myNights" name="myNights" min="1" max="14" />
+
+          <label for="myComments">*Comments</label>
+          <textarea
+            name="myComments"
+            id="myComments"
+            cols="30"
+            rows="2"
+            required
+          ></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
         <!-- div>p -->
         <div id="contact">
           <p>

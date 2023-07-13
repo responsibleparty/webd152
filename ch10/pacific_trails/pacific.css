@@ -2,7 +2,7 @@
   box-sizing: border-box; /* bxbb */
 }
 body {
-  background-color: #eaeaea; /* bgc#90c7e3 */
+  background-color: #eaeaea;
   color: #555; /* c#555 */
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; /* ffa */
 }
@@ -11,7 +11,7 @@ body {
   background-image: linear-gradient(to bottom, #fff, #90c7e3);
 }
 header {
-  background-color: #000032; /* BGC#002171 */
+  background-color: #000032;
   background-image: url(images/sunset.jpg); /* bgi*/
   background-position: right; /* bgdp */
   background-repeat: no-repeat; /* bgr */
@@ -31,7 +31,6 @@ header a:hover {
   color: #90c7e3; /* c#90c7e3 */
 }
 nav {
-  /* font-size: 120%; fz120% */
   font-weight: bold; /* fwb */
   padding: 0;
   text-align: center; /* tac */
@@ -48,6 +47,7 @@ nav li {
 nav a {
   text-decoration: none; /* txd */
 }
+
 nav a:link {
   color: #5c7fa3; /* c#5c7fa3 */
 }
@@ -144,6 +144,15 @@ tr:nth-last-of-type(odd) {
   background-color: #ffcd6f;
 }
 
+form {
+  display: flex;
+  flex-flow: column nowrap;
+}
+input,
+textarea {
+  margin-bottom: 0.5em;
+}
+
 @media (max-width: 600px) {
   header {
     background-image: none;
@@ -193,7 +202,7 @@ tr:nth-last-of-type(odd) {
     color: #1976d2; /* c#1976d2 */
   }
   td:last-of-type {
-    border-bottom: 2px solid #1b69b2; /* bb2-solid#1b69b2 */
+    border-bottom: 2px solid #1b69b2;
   }
 }
 @media (min-width: 600px) {
@@ -213,6 +222,17 @@ tr:nth-last-of-type(odd) {
   section {
     flex: 1;
     margin: 1em;
+  }
+  form {
+    display: grid; /* dg */
+    grid-template-columns: 6em 1fr;
+    gap: 1em;
+    max-width: 30em;
+    width: 60%;
+  }
+  input[type="submit"] {
+    grid-column: 2 /3;
+    width: 9em;
   }
 }
 
